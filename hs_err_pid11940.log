@@ -1,0 +1,201 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 100663296 bytes for Failed to commit area from 0x00000000a1600000 to 0x00000000a7600000 of length 100663296.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./src/hotspot/os/windows/os_windows.cpp:3311), pid=11940, tid=7252
+#
+# JRE version:  (11.0.12+7) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.12+7-LTS, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Xverify:none -XX:TieredStopAtLevel=1 -Dfile.encoding=windows-1252 -Duser.country=BR -Duser.language=pt -Duser.variant com.dio.SantanderDIO_ControleDePonto.SantanderDioControleDePontoApplication
+
+Host: Intel(R) Core(TM) i3-2330M CPU @ 2.20GHz, 4 cores, 5G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1151)
+Time: Fri Aug 20 07:45:47 2021 Hora oficial do Brasil elapsed time: 0.316527 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000026b29d79800):  JavaThread "Unknown thread" [_thread_in_vm, id=7252, stack(0x0000007eae900000,0x0000007eaea00000)]
+
+Stack: [0x0000007eae900000,0x0000007eaea00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x601d7a]
+V  [jvm.dll+0x78b45e]
+V  [jvm.dll+0x78cb2f]
+V  [jvm.dll+0x78d1f3]
+V  [jvm.dll+0x24bc58]
+V  [jvm.dll+0x5fef1a]
+V  [jvm.dll+0x5f39d5]
+V  [jvm.dll+0x3038fc]
+V  [jvm.dll+0x303782]
+V  [jvm.dll+0x3084a6]
+V  [jvm.dll+0x34d5ff]
+V  [jvm.dll+0x34d030]
+V  [jvm.dll+0x2e0a08]
+V  [jvm.dll+0x2e1b66]
+V  [jvm.dll+0x7667e7]
+V  [jvm.dll+0x767f6f]
+V  [jvm.dll+0x35a389]
+V  [jvm.dll+0x749870]
+V  [jvm.dll+0x3c1fbf]
+V  [jvm.dll+0x3c4491]
+C  [jli.dll+0x5207]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x0000026b27b3c530, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000026b29d90800 GCTaskThread "GC Thread#0" [stack: 0x0000007eaea00000,0x0000007eaeb00000] [id=3240]
+  0x0000026b29db6800 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000007eaeb00000,0x0000007eaec00000] [id=6376]
+  0x0000026b29dbb000 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000007eaec00000,0x0000007eaed00000] [id=8272]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffd336f00d7]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000026b29d760f0] Heap_lock - owner thread: 0x0000026b29d79800
+
+Heap address: 0x00000000a1600000, size: 1514 MB, Compressed Oops mode: Non-zero based: 0x00000000a1600000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.098 Loaded shared library C:\Users\wagner.prado\.jdks\corretto-11.0.12\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff6abc40000 - 0x00007ff6abc4d000 	C:\Users\wagner.prado\.jdks\corretto-11.0.12\bin\java.exe
+0x00007ffd8c8d0000 - 0x00007ffd8cac5000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffd8c490000 - 0x00007ffd8c54d000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffd8a160000 - 0x00007ffd8a429000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffd8a830000 - 0x00007ffd8a930000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffd82e60000 - 0x00007ffd82e77000 	C:\Users\wagner.prado\.jdks\corretto-11.0.12\bin\jli.dll
+0x00007ffd8bf10000 - 0x00007ffd8c0b0000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffd8a530000 - 0x00007ffd8a552000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffd8a9f0000 - 0x00007ffd8aa1a000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffd8a560000 - 0x00007ffd8a66b000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffd8a670000 - 0x00007ffd8a70d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffd762e0000 - 0x00007ffd762f9000 	C:\Users\wagner.prado\.jdks\corretto-11.0.12\bin\VCRUNTIME140.dll
+0x00007ffd779d0000 - 0x00007ffd77c6a000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffd8c6e0000 - 0x00007ffd8c77e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffd8b690000 - 0x00007ffd8b6c0000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffd54540000 - 0x00007ffd54655000 	C:\Program Files\Topaz OFD\Warsaw\wslbscr64.dll
+0x00007ffd8c0b0000 - 0x00007ffd8c15c000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffd8b870000 - 0x00007ffd8b90b000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffd8c5b0000 - 0x00007ffd8c6da000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffd8aa20000 - 0x00007ffd8b15f000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007ffd88cd0000 - 0x00007ffd88d03000 	C:\WINDOWS\SYSTEM32\ntmarta.dll
+0x00007ffd6b1c0000 - 0x00007ffd6b2b3000 	C:\Program Files\Topaz OFD\Warsaw\wslbscrwh64.dll
+0x00007ffd71140000 - 0x00007ffd711db000 	C:\Users\wagner.prado\.jdks\corretto-11.0.12\bin\msvcp140.dll
+0x00007ffd33400000 - 0x00007ffd33f5a000 	C:\Users\wagner.prado\.jdks\corretto-11.0.12\bin\server\jvm.dll
+0x00007ffd8ba80000 - 0x00007ffd8ba88000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffd789c0000 - 0x00007ffd789c9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffd8b800000 - 0x00007ffd8b86b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffd7c400000 - 0x00007ffd7c427000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffd81500000 - 0x00007ffd8150a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffd87f10000 - 0x00007ffd87f22000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffd85af0000 - 0x00007ffd85b00000 	C:\Users\wagner.prado\.jdks\corretto-11.0.12\bin\verify.dll
+0x00007ffd7b250000 - 0x00007ffd7b434000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffd78c70000 - 0x00007ffd78c9c000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x0000026b29470000 - 0x0000026b294f3000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffd75da0000 - 0x00007ffd75dc8000 	C:\Users\wagner.prado\.jdks\corretto-11.0.12\bin\java.dll
+0x00007ffd7ee40000 - 0x00007ffd7ee4a000 	C:\Users\wagner.prado\.jdks\corretto-11.0.12\bin\jimage.dll
+0x00007ffd762c0000 - 0x00007ffd762d7000 	C:\Users\wagner.prado\.jdks\corretto-11.0.12\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\wagner.prado\.jdks\corretto-11.0.12\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Program Files\Topaz OFD\Warsaw;C:\Users\wagner.prado\.jdks\corretto-11.0.12\bin\server
+
+VM Arguments:
+jvm_args: -Xverify:none -XX:TieredStopAtLevel=1 -Dfile.encoding=windows-1252 -Duser.country=BR -Duser.language=pt -Duser.variant 
+java_command: com.dio.SantanderDIO_ControleDePonto.SantanderDioControleDePontoApplication
+java_class_path (initial): C:\Users\wagner.prado\Dropbox\curso\Programação\Java Digital innovation\Santander java\SantanderDIO_ControleDePonto\SantanderDIO_ControleDePonto\build\classes\java\main;C:\Users\wagner.prado\Dropbox\curso\Programação\Java Digital innovation\Santander java\SantanderDIO_ControleDePonto\SantanderDIO_ControleDePonto\build\resources\main;C:\Users\wagner.prado\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-web\2.3.1.RELEASE\555c4f90141cdbc7637145e413bca0d622ba6796\spring-boot-starter-web-2.3.1.RELEASE.jar;C:\Users\wagner.prado\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-data-jpa\2.3.1.RELEASE\5531a4cbd506f13a0b4483ed73c2e75a03d8da46\spring-boot-starter-data-jpa-2.3.1.RELEASE.jar;C:\Users\wagner.prado\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-json\2.3.1.RELEASE\8342003919c7e5a2470072595ea190cb8a9552c0\spring-boot-starter-json-2.3.1.RELEASE.jar;C:\Users\wagner.prado\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-aop\2.3.1.RELEASE\f42e23091d29bde8d1356e45cf13ad32dae51437\spring-boot-starter-aop-2.3.1.RELEASE.jar;C:\Users\wagner.prado\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-jdbc\2.3.1.RELEASE\800b64e76588ea88761ad9108cde762204805d66\spring-boot-starter-jdbc-2.3.1.RELEASE.jar;C:\Users\wagner.prado\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter\2.3.1.RELEASE\e0d28696fea064578cb01da346232284f922eba4\spring-boot-starter-2.3.1.RELEASE.jar;C:\Users\wagner.prado\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-autoconfigure\2.3.1.RELEASE\6d679d6ba26235a0e81ca1d58f9c1024d9427411\spring-boot-autoconfigure-2.3.1.RELEASE.jar;C:\Users\wagner.prado\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot\2.3.1.RELEASE\ce8d8b6838ecceb68962b975b18682f4237ccf71\spring-boot-2.3.1.RELEASE.jar;C:\Users\wagner.prado\.gra
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     bool BytecodeVerificationLocal                = false                                     {product} {command line}
+     bool BytecodeVerificationRemote               = false                                     {product} {command line}
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 100663296                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 1587544064                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 6973028                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 244685212                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 0                                      {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     intx TieredStopAtLevel                        = 1                                         {product} {command line}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Users\wagner.prado\.jdks\corretto-11.0.12
+PATH=C:\oracle\product\10.2.0\client_3;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\teste\Downloads.\scrcpy-win32-v1.16;C:\Program Files (x86)\ClockworkMod\Universal Adb Driver\;C:\Users\wagner.prado\.jdks\corretto-11.0.12\bin;C:\Program Files\Git\cmd;C:\Users\wagner.prado\AppData\Local\Microsoft\WindowsApps;
+USERNAME=wagner.prado
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 42 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.1151)
+OS uptime: 7 days 17:39 hours
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 42 stepping 7 microcode 0x2f, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, clmul, ht, tsc, tscinvbit
+
+Memory: 4k page, system-wide physical 6051M (360M free)
+TotalPageFile size 11075M (AvailPageFile size 24M)
+current process WorkingSet (physical memory assigned to process): 12M, peak: 12M
+current process commit charge ("private bytes"): 50M, peak: 146M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.12+7-LTS) for windows-amd64 JRE (11.0.12+7-LTS), built on Jul 13 2021 17:58:36 by "Administrator" with unknown MS VC++:1916
+
+END.
